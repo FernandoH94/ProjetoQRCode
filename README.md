@@ -1,4 +1,4 @@
-# Gerador de QR Code com Sugestões de Viagem e Imagens Temáticas
+# Gerador de QR Code com geração de imagens aleatórias.
  
 ![Banner do Projeto - Exemplo visual do gerador de QR Code com sugestão de viagem e imagem](/img/readme.png)
  
