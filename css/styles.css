@@ -1,0 +1,134 @@
+:root {
+  --primary-dark: #0f2027;
+  --primary-mid: #203a43;
+  --primary-light: #2c5364;
+  --accent: #00bcd4;
+  --text-main: #333;
+  --text-light: #777;
+  --background: #f9f9f9;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-mid), var(--primary-light));
+  padding: 20px;
+  color: var(--text-main);
+}
+
+.container {
+  background-color: var(--white);
+  width: 100%;
+  max-width: 420px;
+  border-radius: 15px;
+  padding: 25px 20px;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#qr-header {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#qr-header h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-mid);
+}
+
+#qr-header p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+#qr-form {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#qr-form input,
+#qr-form button {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  margin-bottom: 12px;
+}
+
+#qr-form input {
+  border: 1px solid var(--text-light);
+  padding: 0 15px;
+  transition: border-color 0.3s;
+}
+
+#qr-form input:focus {
+  border-color: var(--accent);
+}
+
+#qr-form button {
+  background: linear-gradient(135deg, var(--primary-mid), var(--primary-light));
+  color: var(--white);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#qr-form button:hover {
+  transform: scale(1.03);
+  background: linear-gradient(135deg, var(--primary-light), var(--primary-mid));
+}
+
+#qr-code {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 100%;
+  background: var(--background);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.container.active #qr-code {
+  display: flex;
+}
+
+#qr-code img {
+  max-width: 100%;
+  height: auto;
+}
+
+#qr-image {
+  display: none;
+  width: 100%;
+}
+
+#qr-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.container.active #qr-image {
+  display: block;
+}
